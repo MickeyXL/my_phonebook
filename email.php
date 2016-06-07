@@ -6,7 +6,7 @@
 
   if (!$mail->ValidateAddress($email)){
     echo'<div class="alert-box">';
-      echo'<span>Favor digitar um email válido.</span>';
+      echo'<span>Validate email.</span>';
       echo'<a href="email.php">fechar</a>';
     echo'</div>';
   }
@@ -16,13 +16,13 @@
   $mail->Host = 'smtp.gmail.com';
   $mail->Port = 587;
   $mail->SMTPSecure = 'tls';
-  $mail->Username = "intruder.star@gmail.com"; // my email which I hope to receive the data inputed on the field
-  $mail->Password = "fulltime12345";
+  $mail->Username = "Username@gmail.com"; // my email which I hope to receive the data inputed on the field
+  $mail->Password = "Password";
 
-  $mail->SetFrom('intruder.star@gmail.com', 'Interessado'); // the email from the person who filled the form, that will be in the body of the message that I will receive
+  $mail->SetFrom('Username@gmail.com', 'Sender'); // the email from the person who filled the form, that will be in the body of the message that I will receive
   $address = $email; // my email which I hope to receive the data inputed on the field
-  $mail->AddAddress($address, "Fine Design");
-  $mail->Subject = "Fine Design - Avise me!";
+  $mail->AddAddress($address, "Activator");
+  $mail->Subject = "Activator acc";
   $mail->MsgHTML($email);
 
   if(!$mail->Send()) {
